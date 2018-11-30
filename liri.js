@@ -132,7 +132,7 @@ function doThisWrite () {
 
 		readQuery = data[1];
 
-		if (data[0] == "my-bands") {
+		if (data[0] == "concert-this") {
 		 	bandWrite();
 		}
 		else if (data[0] == "spotify-this-song") {
@@ -151,7 +151,7 @@ function doThisWrite () {
 var action = process.argv[2];
 
 switch (action) {
-	case "my-bands":
+	case "concert-this":
 		bandWrite();
 		break;
 
@@ -167,6 +167,6 @@ switch (action) {
 		doThisWrite();
 		break;
 	default:
-		console.log("Please Use a Working Command: \nmy-bands \nspotify-this-song \nmovie-this \ndo-what-it-says");
+		console.log("Please Use a Working Command: \nconcert-this \nspotify-this-song \nmovie-this \ndo-what-it-says");
 		break;
 }
