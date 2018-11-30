@@ -1,5 +1,5 @@
 require("dotenv").config();
-require("./keys.js")
+var keys = require("./keys.js");
 
 var divider = "\n----------------------------------\n"
 
@@ -16,10 +16,7 @@ var divider = "\n----------------------------------\n"
 //Spotify Function
 var Spotify = require('node-spotify-api');
 
-var spotify = new Spotify ({
-	id: 'df16d8312ed54b45b4d65dc32a81d78d',
-	secret: '176efb35dedf483ebb4371809d847fdd'
-});
+var spotify = new Spotify (keys.spotify);
 
 function spotifyWrite () {
 
@@ -71,7 +68,7 @@ function spotifyWrite () {
 
 //OMDB Function
 function movieWrite () {
-	var request = require('axios');
+	var request = require('request');
 
 	var queryTerm;
 	var comboTerm = "";
