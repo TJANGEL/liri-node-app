@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 var keys = require("./keys.js");
 
 var divider = "\n----------------------------------\n"
@@ -10,6 +11,11 @@ var divider = "\n----------------------------------\n"
 // Bands In Town Function
 // var BandsInTown = require('bandsInTown');
 
+// "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+
+// Name of Venue
+// Venue location
+// Dete of Event (use moment to format this as "MM/DD/YYYY")
 
 // // bandWrite ();
 
@@ -50,7 +56,7 @@ function spotifyWrite () {
 			artist += ", " + data.tracks.items[0].artists[i].name;
 		}
 
-		var songMessage = "Song: " + data.tracks.items[0].name + "\nArtist: " + artist + "\nAlbum: " + data.tracks.items[0].album.name + "\nLink: " + data.tracks.items[0].external_urls.spotify;
+		var songMessage = "Artist: " + artist + "\nSong: " + data.tracks.items[0].name  + "\nLink: " + data.tracks.items[0].external_urls.spotify + "\nAlbum: " + data.tracks.items[0].album.name;
 
 		songMessage += divider;
 
