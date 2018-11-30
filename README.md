@@ -1,4 +1,4 @@
-# liri-node-app
+# LIRI Bot App
 
 API's utilized: Spotify, BandsInTown, OMDB
 
