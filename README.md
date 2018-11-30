@@ -6,7 +6,7 @@ Dependencies: axios, dotenv, node-spotify-api
 
 LIRI a copy of Apple's Siri
 
-LIRI will find search for concerts, movies and song information with simple commands:
+LIRI will search for concerts, movies, and song information with simple commands:
 
     `concert-this`
 
