@@ -58,7 +58,7 @@ LIRI will search for concerts, movies, and song information with simple commands
 
         Screenshot:
         
-        [![Do What it Says](https://github.com/TJANGEL/liri-node-app/blob/master/images/do-what-it-says-screenshot.png)]
+        [![Do What it Says](images/do-what-it-says-screenshot.png)]
 
    How data is formatted when appended to log.txt file:
 
