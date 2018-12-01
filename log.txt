@@ -34,3 +34,18 @@ Country: USA
 Language: English, Norwegian
 Plot: When the newly-crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
 Actors: Kristen Bell, Idina Menzel, Jonathan Groff, Josh Gad
+----------------------------------
+Title: Halloween
+Year: 1978
+IMDB Rating: 7.8/10
+Rotten Tomatoes Rating: 95%
+Country: USA
+Language: English
+Plot: Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield to kill again.
+Actors: Donald Pleasence, Jamie Lee Curtis, Nancy Kyes, P.J. Soles
+----------------------------------
+Artist: Jason Mraz
+Song: Unlonely
+Link: https://open.spotify.com/track/7Igc6JB0xPDcn5yRkkVGQX
+Album: Know.
+----------------------------------
