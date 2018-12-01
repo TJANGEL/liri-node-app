@@ -1,10 +1,6 @@
 # LIRI Bot App
 
-API's utilized: Spotify, BandsInTown, OMDB
-
-Dependencies: axios, dotenv, node-spotify-api
-
-LIRI a copy of Apple's Siri
+Language Interpretation and Recognition Interface that allows users to input simple text commands.
 
 LIRI will search for concerts, movies, and song information with simple commands:
 
@@ -16,6 +12,9 @@ LIRI will search for concerts, movies, and song information with simple commands
 
     `do-what-it-says`
 
+API's utilized: Spotify, BandsInTown, OMDB
 
-Demo of functioning app:
-===========================
+Dependencies: axios, dotenv, node-spotify-api
+
+# Demo of functioning app:
+
