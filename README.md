@@ -45,6 +45,8 @@ LIRI will search for concerts, movies, and song information with simple commands
 
         Screenshot:
         
+        <img src="images/Spotify-interact-Screenshot.png" >
+        
         ![Spotify](https://github.com/TJANGEL/liri-node-app/blob/master/images/Spotify-interact-Screenshot.png)
    
    
