@@ -50,6 +50,59 @@ function bandWrite() {
 
 }
 
+// "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+
+// Name of Venue
+// Venue location
+// Dete of Event (use moment to format this as "MM/DD/YYYY")
+
+// //Bands In Town Keys
+// var activeKeys = require('./keys.js');
+
+// function bandWrite () {
+// 	var request = require('request');
+
+// 	var artist;
+// 	var comboTerm = "";
+
+// 	for (var i = 3; i < process.argv.length; i++) {
+// 		comboTerm += process.argv[i] + " ";
+// 	}
+
+// 	if (process.argv[2] == "concert-this" && process.argv[3] != undefined) {
+// 		artist = comboTerm;
+// 	}
+// 	else if (process.argv[2] == "do-what-it-says") {
+// 		artist = readQuery;
+// 	}
+
+// 	var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+
+// 	request(queryURL, function (error, response, body) {
+// 		var obj = JSON.parse(body);
+
+// 		if (error) {
+// 			return console.log(error);
+// 		}
+// 		else if (obj.Response == "False") {
+// 			return console.log("No Artist Found");
+// 		}
+
+// 		var bandMessage = "Venue Name: " + obj.Venue + "\nVenue Location: " + obj.Location + "\nDate of Concert: " + obj.Date;
+
+// 		bandMessage += divider;
+
+// 		console.log(divider + bandMessage);
+
+// 		fs.appendFile("log.txt", bandMessage, function (err) {
+// 			if (err) {
+// 				console.log(err);
+// 			}
+// 		})
+
+// 	})
+// }
+
 // // bandWrite ();
 
 //Spotify Function
