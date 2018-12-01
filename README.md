@@ -36,6 +36,11 @@ LIRI will search for concerts, movies, and song information with simple commands
 
 # Demo of functioning app:
 
-   Spotify:
-        Run `node liri.js spotify-this-song '<song name here>'`
+   Bands In Town: `node liri.js concert-this '<artist name here>'`
+   
+   Spotify: `node liri.js spotify-this-song '<song name here>'`
+   
+   OMDB: `node liri.js movie-this '<movie name here>'`
+
+
         
