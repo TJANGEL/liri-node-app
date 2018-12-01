@@ -173,13 +173,15 @@ var fs = require("fs");
 
 function doThisWrite () {
 
-	fs.readFile("random.txt", "utf8", function (err, data) {
+	fs.readFile("random.txt", "utf8", function (error, data) {
 
-		if (err) {
-			return console.log(err);
+		if (error) {
+			return console.log(error);
 		}
 
 		data = data.split(", ")
+
+		console.log(data);
 
 		readQuery = data[1];
 
