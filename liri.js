@@ -2,6 +2,10 @@ require("dotenv").config();
 
 var keys = require("./keys.js");
 
+var moment = require("moment");
+
+var axios = require("axios")
+
 var divider = "\n----------------------------------\n"
 
 
@@ -9,19 +13,9 @@ var divider = "\n----------------------------------\n"
 // Bands In Town Function
 // var BandsInTown = require('bandsInTown');
 
-// "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-
-// Name of Venue
-// Venue location
-// Dete of Event (use moment to format this as "MM/DD/YYYY")
-
-// //Bands In Town Keys
-// var activeKeys = require('./keys.js');
-
-function bandWrite () {
-	var request = require('request');
-
+function bandWrite() {
 	var artist;
+	var queryTerm;
 	var comboTerm = "";
 
 	for (var i = 3; i < process.argv.length; i++) {
@@ -29,37 +23,31 @@ function bandWrite () {
 	}
 
 	if (process.argv[2] == "concert-this" && process.argv[3] != undefined) {
-		artist = comboTerm;
+		queryTerm = comboTerm;
 	}
 	else if (process.argv[2] == "do-what-it-says") {
-		artist = readQuery;
+		queryTerm = readQuery;
 	}
 
 	var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
 
-	request(queryURL, function (error, response, body) {
-		var obj = JSON.parse(body);
+	axios.get(queryURL).then(
+		function (response) {
+			console.log("======================")
 
-		if (error) {
-			return console.log(error);
-		}
-		else if (obj.Response == "False") {
-			return console.log("No Artist Found");
-		}
+			console.log("Name of Venue: " + response.data[0].venue.name + "\r\n");
+			console.log("Venue Location: " + response.data[0].venue.city + "\r\n");
+			console.log("Date of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY")+ "\r\n");
 
-		var bandMessage = "Venue Name: " + obj.Venue + "\nVenue Location: " + obj.Location + "\nDate of Concert: " + obj.Date;
+			var bandMessage = "========Begin Concert Log Entry======" + "\nName of the Musician: " + artist + "\nName of Venue" + 
 
-		bandMessage += divider;
+			fs.appendFile("log.txt", bandMessage, function (err) {
+				if (err) {
+					console.log(err);
+				}
+			})
+		});
 
-		console.log(divider + bandMessage);
-
-		fs.appendFile("log.txt", bandMessage, function (err) {
-			if (err) {
-				console.log(err);
-			}
-		})
-
-	})
 }
 
 // // bandWrite ();
@@ -67,9 +55,9 @@ function bandWrite () {
 //Spotify Function
 var Spotify = require('node-spotify-api');
 
-var spotify = new Spotify (keys.spotify);
+var spotify = new Spotify(keys.spotify);
 
-function spotifyWrite () {
+function spotifyWrite() {
 
 	var queryTerm;
 	var comboTerm = "";
@@ -88,7 +76,7 @@ function spotifyWrite () {
 		queryTerm = readQuery;
 	}
 
-	spotify.search({type: 'track', query: queryTerm, limit: 1}, function (err, data) {
+	spotify.search({ type: 'track', query: queryTerm, limit: 1 }, function (err, data) {
 
 		if (data.tracks.items[0] == undefined) {
 			console.log("No Song Found");
@@ -101,7 +89,7 @@ function spotifyWrite () {
 			artist += ", " + data.tracks.items[0].artists[i].name;
 		}
 
-		var songMessage = "Artist: " + artist + "\nSong: " + data.tracks.items[0].name  + "\nLink: " + data.tracks.items[0].external_urls.spotify + "\nAlbum: " + data.tracks.items[0].album.name;
+		var songMessage = "Artist: " + artist + "\nSong: " + data.tracks.items[0].name + "\nLink: " + data.tracks.items[0].external_urls.spotify + "\nAlbum: " + data.tracks.items[0].album.name;
 
 		songMessage += divider;
 
@@ -118,7 +106,7 @@ function spotifyWrite () {
 // spotifyWrite();
 
 //OMDB Function
-function movieWrite () {
+function movieWrite() {
 	var request = require('request');
 
 	var queryTerm;
@@ -171,7 +159,7 @@ function movieWrite () {
 var readQuery;
 var fs = require("fs");
 
-function doThisWrite () {
+function doThisWrite() {
 
 	fs.readFile("random.txt", "utf8", function (error, data) {
 
@@ -186,13 +174,13 @@ function doThisWrite () {
 		readQuery = data[1];
 
 		if (data[0] == "concert-this") {
-		 	bandWrite();
+			bandWrite();
 		}
 		else if (data[0] == "spotify-this-song") {
-		 	spotifyWrite();
+			spotifyWrite();
 		}
 		else if (data[0] == "movie-this") {
-		    movieWrite();
+			movieWrite();
 		}
 
 	})
