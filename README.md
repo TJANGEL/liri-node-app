@@ -27,7 +27,7 @@ Include the following NPM installations:
 
 `npm dotenv`, `npm node-spotify-api`, `npm request`, `npm axoios`, `npm moment`, `npm fs`
 
-## Built With:
+### Built With:
 
     Visual Studio Code (https://code.visualstudio.com) - Text editor
     
