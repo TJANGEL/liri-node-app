@@ -36,6 +36,6 @@ LIRI will search for concerts, movies, and song information with simple commands
 
 # Demo of functioning app:
 
-    ### Spotify:
+   Spotify:
         Run `node liri.js spotify-this-song '<song name here>'`
         
