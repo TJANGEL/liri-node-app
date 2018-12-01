@@ -1,8 +1,5 @@
 # LIRI Bot App
 
-![Error Response](https://github.com/TJANGEL/liri-node-app/blob/master/images/Error-response-Screenshot.png)
-
-
 Language Interpretation and Recognition Interface that allows users to input simple text commands.
 
 LIRI will search for concerts, movies, and song information with simple commands:
@@ -75,6 +72,9 @@ LIRI will search for concerts, movies, and song information with simple commands
 
         Screenshot:
         
-        ![Error Response](https://github.com/TJANGEL/liri-node-app/blob/master/images/Error-response-Screenshot.png)
+  
+  
+  
+ # ![Error Response](https://github.com/TJANGEL/liri-node-app/blob/master/images/Error-response-Screenshot.png)
 
    
