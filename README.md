@@ -11,6 +11,21 @@ LIRI will search for concerts, movies, and song information with simple commands
     `movie-this`
 
     `do-what-it-says`
+    
+    
+## Getting Started
+Create your own Spotify and API keys and replace it with the information in the file called .env.
+
+Spotify API keys:
+SPOTIFY_ID=your-spotify-id 
+SPOTIFY_SECRET=your-spotify-secret
+
+NPM Installations
+Navigate to the root of your project. Then in the terminal command line run `npm init -y`, this will initalize a package.json for your project.
+
+Include the following NPM installations:
+
+`npm dotenv`, `npm node-spotify-api`, `npm request`, `npm axoios`, `npm moment`, `npm fs`
 
 ## Built With:
 
