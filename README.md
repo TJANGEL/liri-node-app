@@ -42,38 +42,22 @@ LIRI will search for concerts, movies, and song information with simple commands
 
    
    Spotify: `node liri.js spotify-this-song '<song name here>'`
-
-        Screenshot:
         
-        <img src="images/Spotify-interact-Screenshot.png" >
-        
-        ![Spotify](https://github.com/TJANGEL/liri-node-app/blob/master/images/Spotify-interact-Screenshot.png)
-   
+ # ![Spotify](https://github.com/TJANGEL/liri-node-app/blob/master/images/Spotify-interact-Screenshot.png)
    
    OMDB: `node liri.js movie-this '<movie name here>'`
-
-        Screenshot:
         
-        ![OMDB](https://github.com/TJANGEL/liri-node-app/blob/master/images/OMDB-interact-Screenshot.png)
+ # ![OMDB](https://github.com/TJANGEL/liri-node-app/blob/master/images/OMDB-interact-Screenshot.png)
 
    Do What it Says: `node liri.js do-what-it-says'
-
-        Screenshot:
         
-        ![](images/do-what-it-says-screenshot.png)
+ # ![](images/do-what-it-says-screenshot.png)
 
    How data is formatted when appended to log.txt file:
-
-        Screenshot:
         
-        ![log.txt](https://github.com/TJANGEL/liri-node-app/blob/master/images/log.txt-screenshot.png)
+ # ![log.txt](https://github.com/TJANGEL/liri-node-app/blob/master/images/log.txt-screenshot.png)
 
    Error Response:
-
-        Screenshot:
-        
-  
-  
   
  # ![Error Response](https://github.com/TJANGEL/liri-node-app/blob/master/images/Error-response-Screenshot.png)
 
