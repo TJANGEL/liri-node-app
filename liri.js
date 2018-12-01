@@ -2,16 +2,21 @@ require("dotenv").config();
 
 var keys = require("./keys.js");
 
+var Spotify = require('node-spotify-api');
+
 var moment = require("moment");
 
 var axios = require("axios")
+
+var request = require("request")
+
+var fs = require("fs");
 
 var divider = "\n----------------------------------\n"
 
 
 
 // Bands In Town Function
-// var BandsInTown = require('bandsInTown');
 
 function bandWrite() {
 	var artist;
@@ -33,80 +38,28 @@ function bandWrite() {
 
 	axios.get(queryURL).then(
 		function (response) {
-			console.log("======================")
+			
+			console.log("\nName of Venue: " + response.data[0].venue.name);
+			console.log("\nVenue Location: " + response.data[0].venue.city);
+			console.log("\nDate of Event: " + moment(reponse.data[0].datetime).format("MM-DD-YYYY"))
 
-			console.log("Name of Venue: " + response.data[0].venue.name + "\r\n");
-			console.log("Venue Location: " + response.data[0].venue.city + "\r\n");
-			console.log("Date of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY")+ "\r\n");
+			var bandMessage = "Artist: " + artist + "Venue: " + response.data[0].venue.name + "\nVenue Location: " + response.data[0].venue.city + "\nDate of Event: " + moment(reponse.data[0].datetime).format("MM-DD-YYYY");
 
-			var bandMessage = "========Begin Concert Log Entry======" + "\nName of the Musician: " + artist + "\nName of Venue" + 
+			bandMessage += divider;
+
+			console.log(divider + bandMessage);
 
 			fs.appendFile("log.txt", bandMessage, function (err) {
 				if (err) {
 					console.log(err);
 				}
 			})
-		});
-
+		})
 }
-
-// "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-
-// Name of Venue
-// Venue location
-// Dete of Event (use moment to format this as "MM/DD/YYYY")
-
-// //Bands In Town Keys
-// var activeKeys = require('./keys.js');
-
-// function bandWrite () {
-// 	var request = require('request');
-
-// 	var artist;
-// 	var comboTerm = "";
-
-// 	for (var i = 3; i < process.argv.length; i++) {
-// 		comboTerm += process.argv[i] + " ";
-// 	}
-
-// 	if (process.argv[2] == "concert-this" && process.argv[3] != undefined) {
-// 		artist = comboTerm;
-// 	}
-// 	else if (process.argv[2] == "do-what-it-says") {
-// 		artist = readQuery;
-// 	}
-
-// 	var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-
-// 	request(queryURL, function (error, response, body) {
-// 		var obj = JSON.parse(body);
-
-// 		if (error) {
-// 			return console.log(error);
-// 		}
-// 		else if (obj.Response == "False") {
-// 			return console.log("No Artist Found");
-// 		}
-
-// 		var bandMessage = "Venue Name: " + obj.Venue + "\nVenue Location: " + obj.Location + "\nDate of Concert: " + obj.Date;
-
-// 		bandMessage += divider;
-
-// 		console.log(divider + bandMessage);
-
-// 		fs.appendFile("log.txt", bandMessage, function (err) {
-// 			if (err) {
-// 				console.log(err);
-// 			}
-// 		})
-
-// 	})
-// }
 
 // // bandWrite ();
 
 //Spotify Function
-var Spotify = require('node-spotify-api');
 
 var spotify = new Spotify(keys.spotify);
 
@@ -160,7 +113,6 @@ function spotifyWrite() {
 
 //OMDB Function
 function movieWrite() {
-	var request = require('request');
 
 	var queryTerm;
 	var comboTerm = "";
@@ -210,7 +162,6 @@ function movieWrite() {
 
 //DoThis Function
 var readQuery;
-var fs = require("fs");
 
 function doThisWrite() {
 
