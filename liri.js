@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+
 var keys = require("./keys.js");
 
 var Spotify = require('node-spotify-api');
@@ -13,8 +14,6 @@ var request = require("request")
 var fs = require("fs");
 
 var divider = "\n----------------------------------\n"
-
-
 
 // Bands In Town Function
 
@@ -41,9 +40,9 @@ function bandWrite() {
 			
 			console.log("\nName of Venue: " + response.data[0].venue.name);
 			console.log("\nVenue Location: " + response.data[0].venue.city);
-			console.log("\nDate of Event: " + moment(reponse.data[0].datetime).format("MM-DD-YYYY"))
+			console.log("\nDate of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY"))
 
-			var bandMessage = "Artist: " + artist + "Venue: " + response.data[0].venue.name + "\nVenue Location: " + response.data[0].venue.city + "\nDate of Event: " + moment(reponse.data[0].datetime).format("MM-DD-YYYY");
+			var bandMessage = "Venue: " + response.data[0].venue.name + "\nVenue Location: " + response.data[0].venue.city + "\nDate of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY");
 
 			bandMessage += divider;
 

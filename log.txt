@@ -49,3 +49,7 @@ Song: Unlonely
 Link: https://open.spotify.com/track/7Igc6JB0xPDcn5yRkkVGQX
 Album: Know.
 ----------------------------------
+Venue: Bowery Ballroom
+Venue Location: New York
+Date of Event: 12-13-2018
+----------------------------------
