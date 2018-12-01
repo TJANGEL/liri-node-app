@@ -38,12 +38,27 @@ LIRI will search for concerts, movies, and song information with simple commands
 
    Bands In Town: `node liri.js concert-this '<artist name here>'`
    
-   
+        Screenshot:
+
    
    Spotify: `node liri.js spotify-this-song '<song name here>'`
+
+        Screenshot:
    
    
    
    OMDB: `node liri.js movie-this '<movie name here>'`
+
+        Screenshot:
+
+   Do What it Says: `node liri.js do-what-it-says'
+
+        Screenshot:
+
+   How data is formatted when appended to log.txt file:
+
+        Screenshot:
+
+
 
    
