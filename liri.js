@@ -38,9 +38,9 @@ function bandWrite() {
 	axios.get(queryURL).then(
 		function (response) {
 			
-			console.log("\nName of Venue: " + response.data[0].venue.name);
-			console.log("\nVenue Location: " + response.data[0].venue.city);
-			console.log("\nDate of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY"))
+			// console.log("\nName of Venue: " + response.data[0].venue.name);
+			// console.log("\nVenue Location: " + response.data[0].venue.city);
+			// console.log("\nDate of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY"))
 
 			var bandMessage = "Venue: " + response.data[0].venue.name + "\nVenue Location: " + response.data[0].venue.city + "\nDate of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY");
 
