@@ -48,3 +48,7 @@ Venue: Bowery Ballroom
 Venue Location: New York
 Date of Event: 12-13-2018
 ----------------------------------
+Venue: Bowery Ballroom
+Venue Location: New York
+Date of Event: 12-13-2018
+----------------------------------
