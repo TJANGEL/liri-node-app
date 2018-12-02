@@ -53,20 +53,19 @@ Include the following NPM installations:
 
    Bands In Town: `node liri.js concert-this '<artist name here>'`
    
-        Screenshot:
+  ![Bands In Town](https://github.com/TJANGEL/liri-node-app/blob/master/images/bandsInTown-Screenshot.png)
 
-   
    Spotify: `node liri.js spotify-this-song '<song name here>'`
         
- # ![Spotify](https://github.com/TJANGEL/liri-node-app/blob/master/images/Spotify-interact-Screenshot.png)
+  ![Spotify](https://github.com/TJANGEL/liri-node-app/blob/master/images/Spotify-interact-Screenshot.png)
    
    OMDB: `node liri.js movie-this '<movie name here>'`
         
- # ![OMDB](https://github.com/TJANGEL/liri-node-app/blob/master/images/OMDB-interact-Screenshot.png)
+  ![OMDB](https://github.com/TJANGEL/liri-node-app/blob/master/images/OMDB-interact-Screenshot.png)
 
    Do What it Says: `node liri.js do-what-it-says'
         
- # ![](images/do-what-it-says-screenshot.png)
+ # ![Do What it Says](images/do-what-it-says-screenshot.png)
 
    How data is formatted when appended to log.txt file:
         
