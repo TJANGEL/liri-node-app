@@ -51,6 +51,8 @@ Include the following NPM installations:
 
 # Demo of functioning app:
 
+  ![](https://github.com/TJANGEL/liri-node-app/blob/master/liri-bot-demo.mov)
+
    Bands In Town: `node liri.js concert-this '<artist name here>'`
    
   ![Bands In Town](https://github.com/TJANGEL/liri-node-app/blob/master/images/bandsInTown-Screenshot.png)
