@@ -1,18 +1,15 @@
+// access to spotify keys
 require("dotenv").config();
 
-
+// requirements
 var keys = require("./keys.js");
-
 var Spotify = require('node-spotify-api');
-
 var moment = require("moment");
-
 var axios = require("axios")
-
 var request = require("request")
-
 var fs = require("fs");
 
+// line to separate each command response
 var divider = "\n----------------------------------\n"
 
 // Bands In Town Function
@@ -157,6 +154,7 @@ function movieWrite() {
 // movieWrite();
 
 //DoThis Function
+
 var readQuery;
 
 function doThisWrite() {
